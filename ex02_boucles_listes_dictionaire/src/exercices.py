@@ -2,13 +2,21 @@ from __future__ import annotations
 
 
 def somme_pairs(nums: list[int]) -> int:
+    somme = 0
+    for i in nums:
+        if i % 2 == 0:
+            somme = somme + i
+    return somme
     # TODO: Implémentez la fonction pour calculer la somme de tous les nombres pairs de la liste donnée.
-    raise NotImplementedError
 
 
 def compter_occurrences(items: list[int], valeur: int) -> int:
+    nb_occurences = 0
+    for i in items:
+        if i == valeur:
+            nb_occurences += 1
+    return nb_occurences
     # TODO: Implémentez la fonction pour compter le nombre d'occurrences de `valeur` dans la liste `items`.
-    raise NotImplementedError
 
 
 def table_multiplication(n: int) -> list[int]:
