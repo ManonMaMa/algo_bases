@@ -20,6 +20,14 @@ def compter_occurrences(items: list[int], valeur: int) -> int:
 
 
 def table_multiplication(n: int) -> list[int]:
+    i = 0
+    liste_table = []
+    while i != 10:
+        i = i + 1
+        r = n * i
+        liste_table.append(r)
+    return liste_table 
+
     # TODO: Implémentez la fonction pour retourner la table de multiplication de `n` (jusqu'à 10 inclus).
     raise NotImplementedError
 
