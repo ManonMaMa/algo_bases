@@ -19,12 +19,11 @@ def to_uppercase(param: str) -> str:
 
 def count_substring(param: str, sub: str) -> int:
     # Une fonction qui compte le nombre d'occurrences d'une sous-chaîne dans une chaîne.
-    raise NotImplementedError
-
+    return param.count(sub)
 
 def list_length(param: list[int]) -> int:
     # Une fonction qui retourne le nombre d'éléments dans une liste d'entiers.
-    raise NotImplementedError
+    return len(param)
 
 
 def max_in_list(param: list[int]) -> int:
