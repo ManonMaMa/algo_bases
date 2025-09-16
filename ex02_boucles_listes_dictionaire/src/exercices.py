@@ -195,12 +195,15 @@ def table_multiplication_sets(n: int) -> set[int]:
 def trouver_maximum_sets(nums: set[int]) -> int:
     return max(nums)
     # TODO: Implémentez une fonction pour trouver et retourner le nombre maximum d'un set.
-    raise NotImplementedError
 
 
 def compter_negatifs_sets(nums: set[int]) -> int:
+    count = 0
+    for i in nums: 
+        if i < 0: 
+            count += 1
+    return count
     # TODO: Implémentez une fonction pour compter et retourner le nombre de nombres négatifs dans un set.
-    raise NotImplementedError
 
 # dictionnaires
 
