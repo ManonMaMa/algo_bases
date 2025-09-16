@@ -48,10 +48,23 @@ def pgcd(a: int, b: int) -> int:
 
 
 def fibonacci(n: int) -> int:
+    i = 2
+    nb_fi = 1
+    nb_fi_old = 0
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    while i <= n:
+        nb_fi_new = nb_fi_old + nb_fi
+        nb_fi_old = nb_fi
+        nb_fi = nb_fi_new
+        i = i + 1
+    return nb_fi_new
+
     # La suite de Fibonacci est une suite de nombres où chaque terme est la somme des deux termes précédents,
-    # en commençant par 0 et 1. Par exemple : 0, 1, 1, 2, 3, 5, 8, ...
+    # en commençant par 0 et 1. Par exemple : 0, 1, 1, 2, 3, 5, 8, ... 13, 21, 34, 55
     # À FAIRE : Calculer le nième nombre de Fibonacci de manière itérative.
-    raise NotImplementedError
 
 
 def crible_eratosthene(n: int) -> list[int]:
