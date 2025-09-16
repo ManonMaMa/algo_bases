@@ -68,6 +68,31 @@ def fibonacci(n: int) -> int:
 
 
 def crible_eratosthene(n: int) -> list[int]:
+    liste_nb_premier = [bool]
+    i = 0
+    while i <= n:
+        liste_nb_premier.append(True)
+        i += 1
+    liste_nb_premier[0] = False
+    liste_nb_premier[1] = False
+
+    p = 2
+    while p <= n:
+        if liste_nb_premier[p] == True:
+            m = p + 1
+            while m <= n:
+                if m % p == 0:
+                    liste_nb_premier[m] = False
+                m += 1
+        p += 1
+
+    liste_premiers = []
+    t = 0
+    while t <= n:
+        if liste_nb_premier[t] == True:
+            liste_premiers.append(t)
+        t += 1
+
     # À FAIRE : Implémenter le crible d'Ératosthène pour générer tous les nombres premiers jusqu'à n.
     # Étapes :
     # 1. Créer une liste booléenne de taille n+1 initialement à True, où l'indice représente un nombre.
@@ -75,10 +100,30 @@ def crible_eratosthene(n: int) -> list[int]:
     # 3. Parcourir les entiers p de 2 à √n (inclus).
     # 4. Si p est premier (booléen True), alors marquer tous ses multiples (p*p jusqu'à n) comme False.
     # 5. Extraire les indices marqués True dans la liste et les retourner sous forme de liste de nombres premiers.
-    raise NotImplementedError
 
 
 def is_prime(n: int) -> bool:
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+    if n % 3 == 0:
+        return False
+    div = 5
+    while div * div <= n:
+        if n % div == 0:
+            return False
+        if n % (div + 2) == 0:
+            return False
+        div += 6
+    return True
+        
+        
+
     # À FAIRE : Vérifier si un nombre est premier à l'aide de vérifications itératives.
     # Instructions détaillées :
     # 1. Si n est inférieur ou égal à 1, retourner False (les nombres <= 1 ne sont pas premiers).
