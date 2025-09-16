@@ -80,8 +80,13 @@ def convertir_majuscule(items: str) -> str:
 
 
 def compter_mots_commencant_par(items: str, lettre: str) -> int:
+    liste = items.split()
+    count = 0
+    for i in liste:
+        if i.startswith('t'):
+            count += 1
+    return count
     # TODO: Implémentez une fonction pour compter les mots commençant par une lettre donnée.
-    raise NotImplementedError
 
 
 def trouver_mot_finissant_par(items: str, suffixe: str) -> list[str]:
