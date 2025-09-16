@@ -4,17 +4,17 @@ from __future__ import annotations
 # Exemples simples : Création d'une fonction et appel
 def print_hello_world() -> None:
     # Une fonction qui affiche "Hello, world!"
-    raise NotImplementedError
+    return "Hello, World!"
 
 
 def reverse_string(param: str) -> str:
     # Une fonction qui renverse une chaîne donnée en entrée.
-    raise NotImplementedError
+    return param[::-1]
 
 
 def to_uppercase(param: str) -> str:
     # Une fonction qui transforme une chaîne en majuscules.
-    raise NotImplementedError
+    return param.upper()
 
 
 def count_substring(param: str, sub: str) -> int:
