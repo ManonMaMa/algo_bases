@@ -173,8 +173,11 @@ def somme_pairs_sets(nums: set[int]) -> int:
     # TODO: Implémentez la fonction pour calculer la somme de tous les nombres pairs dans un set donné.
 
 def compter_occurrences_sets(items: set[int], valeur: int) -> int:
+    if valeur in items:
+        return 1
+    else: 
+        return 0
     # TODO: Cette fonction vérifiera simplement si `valeur` existe puisque les sets ne permettent pas les doublons.
-    raise NotImplementedError
 
 
 def table_multiplication_sets(n: int) -> set[int]:
