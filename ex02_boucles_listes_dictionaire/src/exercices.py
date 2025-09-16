@@ -27,14 +27,16 @@ def table_multiplication(n: int) -> list[int]:
         r = n * i
         liste_table.append(r)
     return liste_table 
-
     # TODO: Implémentez la fonction pour retourner la table de multiplication de `n` (jusqu'à 10 inclus).
-    raise NotImplementedError
 
 
 def trouver_maximum(nums: list[int]) -> int:
+    u = nums[0]
+    for i in nums :
+        if i > u :
+            u = i
+    return u
     # TODO: Implémentez une fonction pour trouver et retourner la valeur maximale dans la liste.
-    raise NotImplementedError
 
 
 def calculer_moyenne(nums: list[int]) -> float:
