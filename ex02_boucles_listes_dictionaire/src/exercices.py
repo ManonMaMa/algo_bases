@@ -193,6 +193,7 @@ def table_multiplication_sets(n: int) -> set[int]:
 
 
 def trouver_maximum_sets(nums: set[int]) -> int:
+    return max(nums)
     # TODO: Implémentez une fonction pour trouver et retourner le nombre maximum d'un set.
     raise NotImplementedError
 
