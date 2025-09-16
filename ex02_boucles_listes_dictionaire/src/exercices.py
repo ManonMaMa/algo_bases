@@ -181,6 +181,13 @@ def compter_occurrences_sets(items: set[int], valeur: int) -> int:
 
 
 def table_multiplication_sets(n: int) -> set[int]:
+    i = 0
+    liste_table = set()
+    while i != 10:
+        i = i + 1
+        r = n * i
+        liste_table.add(r)
+    return liste_table 
     # TODO: Implémentez une fonction pour retourner la table de multiplication (jusqu'à 10 inclus) sous forme de set.
     raise NotImplementedError
 
