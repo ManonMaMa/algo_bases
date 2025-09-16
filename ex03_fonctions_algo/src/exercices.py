@@ -28,7 +28,7 @@ def list_length(param: list[int]) -> int:
 
 def max_in_list(param: list[int]) -> int:
     # Une fonction qui retourne le plus grand élément dans une liste d'entiers.
-    raise NotImplementedError
+    return max(param)
 
 
 # Fonctions classiques
