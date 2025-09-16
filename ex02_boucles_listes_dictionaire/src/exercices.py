@@ -61,8 +61,8 @@ def compter_negatifs(nums: list[int]) -> int:
 
 
 def compter_mots(phrase: str) -> int:
+    return len(phrase.split())
         # TODO: Implémentez une fonction pour compter le nombre de mots dans une chaîne de caractères donnée.
-    raise NotImplementedError
 
 
 def trouver_plus_long(items: list[str]) -> str:
