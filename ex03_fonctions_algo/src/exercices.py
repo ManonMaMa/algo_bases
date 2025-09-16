@@ -121,9 +121,6 @@ def is_prime(n: int) -> bool:
             return False
         div += 6
     return True
-        
-        
-
     # À FAIRE : Vérifier si un nombre est premier à l'aide de vérifications itératives.
     # Instructions détaillées :
     # 1. Si n est inférieur ou égal à 1, retourner False (les nombres <= 1 ne sont pas premiers).
@@ -135,13 +132,17 @@ def is_prime(n: int) -> bool:
     #    - Si n est divisible par le diviseur ou diviseur + 2, retourner False.
     #    - Incrémenter le diviseur de 6 à chaque tour (car les nombres premiers > 3 sont de la forme 6k ± 1).
     # 5. Si aucune des conditions précédentes n'a permis d'établir que n n'est pas premier, retourner True.
-    raise NotImplementedError
 
 
 def is_palindrome(s: str) -> bool:
+    p = s.replace(" ","")
+    z = p.lower()
+    if z == z[::-1]:
+        return True
+    else:
+        return False
     # Un palindrome est une chaîne qui se lit de la même manière à l'endroit et à l'envers.
     # À FAIRE : Vérifier si une chaîne donnée est un palindrome en utilisant l'itération.
-    raise NotImplementedError
 
 
 def binary_search(arr: list[int], target: int) -> int:
