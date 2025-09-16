@@ -165,8 +165,12 @@ def calculer_moyenne_tuples(nums: tuple[int, ...]) -> float:
 # sets
 
 def somme_pairs_sets(nums: set[int]) -> int:
+    somme = 0
+    for i in nums:
+        if i % 2 == 0:
+            somme = somme + i
+    return somme
     # TODO: Implémentez la fonction pour calculer la somme de tous les nombres pairs dans un set donné.
-    raise NotImplementedError
 
 def compter_occurrences_sets(items: set[int], valeur: int) -> int:
     # TODO: Cette fonction vérifiera simplement si `valeur` existe puisque les sets ne permettent pas les doublons.
