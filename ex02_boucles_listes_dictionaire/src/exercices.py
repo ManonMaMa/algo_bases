@@ -32,16 +32,23 @@ def table_multiplication(n: int) -> list[int]:
 
 def trouver_maximum(nums: list[int]) -> int:
     u = nums[0]
-    for i in nums :
-        if i > u :
+    for i in nums:
+        if i > u:
             u = i
     return u
     # TODO: Implémentez une fonction pour trouver et retourner la valeur maximale dans la liste.
 
 
 def calculer_moyenne(nums: list[int]) -> float:
+    somme = 0
+    for i in nums:
+        somme = somme + i
+    if len(nums) == 0:
+        return 0
+    else:
+        moyenne = somme / len(nums)
+        return moyenne
     # TODO: Implémentez une fonction pour calculer et retourner la moyenne des valeurs dans la liste.
-    raise NotImplementedError
 
 
 def compter_negatifs(nums: list[int]) -> int:
