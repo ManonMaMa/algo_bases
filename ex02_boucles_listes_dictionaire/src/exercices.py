@@ -102,12 +102,11 @@ def trouver_mot_finissant_par(items: str, suffixe: str) -> list[str]:
 def compter_caracteres(s: str, char: str) -> int:
     return s.count(char)
         # TODO: Implémentez une fonction pour compter le nombre d'occurences du caractère char et retourner le nombre total.
-    raise NotImplementedError
 
 
 def inverser_chaine(s: str) -> str:
+    return s[::-1]
     # TODO: Implémentez une fonction pour inverser et retourner la chaîne de caractères donnée.
-    raise NotImplementedError
 
 
 def trouver_occurrences_chaine(s: str, c: str) -> int:
