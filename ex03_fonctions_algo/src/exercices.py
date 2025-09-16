@@ -33,6 +33,11 @@ def max_in_list(param: list[int]) -> int:
 
 # Fonctions classiques
 def pgcd(a: int, b: int) -> int:
+    while b != 0:
+        c = a
+        a = b
+        b = c % b
+    return a
     # À FAIRE : Calculer le plus grand commun diviseur (PGCD) de deux entiers.
     # Utiliser l'algorithme d'Euclide en itératif.
     # L'algorithme d'Euclide fonctionne en répétant la division euclidienne entre deux nombres a et b :
@@ -40,7 +45,6 @@ def pgcd(a: int, b: int) -> int:
     # - Lorsque b devient nul, le PGCD est la valeur actuelle de a.
     # Une division euclidienne consiste à diviser deux nombres entiers a et b (b ≠ 0) pour obtenir un
     # quotient q et un reste r, tels que : a = b * q + r, avec 0 ≤ r < |b|.
-    raise NotImplementedError
 
 
 def fibonacci(n: int) -> int:
