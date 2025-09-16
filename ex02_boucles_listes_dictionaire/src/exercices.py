@@ -52,8 +52,12 @@ def calculer_moyenne(nums: list[int]) -> float:
 
 
 def compter_negatifs(nums: list[int]) -> int:
+    count = 0
+    for i in nums: 
+        if i < 0: 
+            count += 1
+    return count
     # TODO: Implémentez une fonction pour compter et retourner le nombre d'entiers négatifs dans la liste.
-    raise NotImplementedError
 
 
 def compter_mots(phrase: str) -> int:
