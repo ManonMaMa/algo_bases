@@ -153,6 +153,14 @@ def binary_search(arr: list[int], target: int) -> int:
 
 # Fonctions récursives
 def gcd_recursive(a: int, b: int) -> int:
+    if a >= b :
+        r = a
+        while r > 0:
+            r = a % b
+            if r > 0:
+                a = b
+                b = r
+        return b
     # À FAIRE : Calculer le PGCD de deux entiers récursivement en utilisant l'algorithme d'Euclide.
     raise NotImplementedError
 
