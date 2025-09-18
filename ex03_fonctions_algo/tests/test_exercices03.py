@@ -1,4 +1,5 @@
 from ex03_fonctions_algo.src.exercices import (
+is_prime_recursive,
 print_hello_world,
 reverse_string,
 to_uppercase,
@@ -101,6 +102,12 @@ def test_fibonacci_recursive():
     assert fibonacci_recursive(1) == 1
     assert fibonacci_recursive(10) == 55
 
+def test_prime_recursive():
+    assert is_prime_recursive(1) == False
+    assert is_prime_recursive(5) == True
+    assert is_prime_recursive(10) == False
+    assert is_prime_recursive(21) == False
+    assert is_prime_recursive(23) == True
 
 def test_is_palindrome_recursive():
     assert is_palindrome_recursive("") == True
