@@ -164,6 +164,10 @@ def gcd_recursive(a: int, b: int) -> int:
     # À FAIRE : Calculer le PGCD de deux entiers récursivement en utilisant l'algorithme d'Euclide.
 
 def fibonacci_recursive(n: int) -> int:
+    if n <= 1:
+        return n
+    else:
+        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
     # À FAIRE : Calculer le nième nombre de Fibonacci de manière récursive.
     raise NotImplementedError
 
