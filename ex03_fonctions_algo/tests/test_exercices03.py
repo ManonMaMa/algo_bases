@@ -114,7 +114,6 @@ def test_is_palindrome_recursive():
     assert is_palindrome_recursive("radar") == True
     assert is_palindrome_recursive("hello") == False
 
-
 def test_factorial_recursive():
     assert factorial_recursive(0) == 1
     assert factorial_recursive(1) == 1

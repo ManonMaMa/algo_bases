@@ -194,4 +194,6 @@ def is_palindrome_recursive(s: str) -> bool:
 def factorial_recursive(n: int) -> int:
     # À FAIRE : Calculer la factorielle d'un nombre en utilisant la récursion.
     # Cas de base : n == 0 retourne 1. Étape récursive : n * factorial(n-1).
-    raise NotImplementedError
+    if n == 0: 
+        return 1
+    return n * factorial_recursive(n-1)
