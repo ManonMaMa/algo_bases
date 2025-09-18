@@ -195,7 +195,6 @@ def is_palindrome_recursive(s: str) -> bool:
     # À FAIRE : Vérifier si une chaîne donnée est un palindrome en utilisant la récursion.
     # Cas de base : Une chaîne de longueur 0 ou 1 est un palindrome.
     # Étape récursive : Comparer le premier et le dernier caractère et vérifier la sous-chaîne.
-    raise NotImplementedError
 
 def factorial_recursive(n: int) -> int:
     # À FAIRE : Calculer la factorielle d'un nombre en utilisant la récursion.
