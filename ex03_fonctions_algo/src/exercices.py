@@ -175,9 +175,10 @@ def fibonacci_recursive(n: int) -> int:
 def is_prime_recursive(n: int, divisor: int = 2) -> bool:
     if n <= 1:
         return False
-    while divisor * divisor < n:
+    while divisor * divisor <= n:
         if n % divisor == 0:
             return False
+        divisor += 1
     return True
     # À FAIRE : Vérifier si un nombre est premier en utilisant la récursion.
     # Cas de base : n <= 1 n'est pas premier. Pour n > 1, si divisible par divisor, n'est pas premier.
