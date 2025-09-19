@@ -2,6 +2,18 @@ from __future__ import annotations
 
 
 def tri_bulle(lst: list[int]) -> list[int]:
+    copie_lst = lst
+    i = len(copie_lst)
+    changement = True
+    while changement == True:
+        changement = False
+        for k in range(i - 1):
+            if copie_lst[k] > copie_lst[k+1]:
+                copie_lst[k], copie_lst[k+1] = copie_lst[k+1], copie_lst[k]
+                changement = True
+        i = i - 1
+    return copie_lst
+
     """Tri à bulles (ne pas modifier `lst`).
     Pseudocode:
     1. Créer une copie de `lst` pour éviter la mutation.
@@ -10,7 +22,6 @@ def tri_bulle(lst: list[int]) -> list[int]:
         - Si un élément est plus grand que le suivant, les échanger.
     3. Retourner la liste triée.
     """
-    raise NotImplementedError
 
 
 def tri_insertion(lst: list[int]) -> list[int]:
