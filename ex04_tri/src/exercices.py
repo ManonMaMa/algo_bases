@@ -89,7 +89,6 @@ def tri_shell(lst: list[int]) -> list[int]:
             - Appliquer un tri par insertion localement.
     4. Retourner la liste triée.
     """
-    raise NotImplementedError
 
 
 def tri_tas(lst: list[int]) -> list[int]:
