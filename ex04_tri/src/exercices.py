@@ -70,6 +70,16 @@ def tri_selection(lst: list[int]) -> list[int]:
 
 
 def tri_shell(lst: list[int]) -> list[int]:
+    liste = lst
+    N = len(liste)
+    while N > 1:
+        cle = liste[N-1]
+        for n in range(N-1):
+            if liste[n] > cle :
+                cle = liste[n]
+            liste[N-1] = cle
+        N = N - 1
+    return liste
     """Tri de Shell (ne pas modifier `lst`).
     Pseudocode:
     1. Créer une copie de `lst` pour éviter la mutation.
