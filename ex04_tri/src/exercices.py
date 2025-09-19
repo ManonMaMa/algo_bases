@@ -47,6 +47,18 @@ def tri_insertion(lst: list[int]) -> list[int]:
 
 
 def tri_selection(lst: list[int]) -> list[int]:
+    liste = lst
+    for i in range(len(liste)):
+      # Trouver le min
+       min = i
+       for j in range(i+1, len(liste)):
+           if liste[min] > liste[j]:
+               min = j
+                
+       liste_t = liste[i]
+       liste[i] = liste[min]
+       liste[min] = liste_t
+    return liste
     """Tri par sélection (ne pas modifier `lst`).
     Pseudocode:
     1. Créer une copie de `lst` pour éviter la mutation.
@@ -55,7 +67,6 @@ def tri_selection(lst: list[int]) -> list[int]:
         - Échanger le plus petit élément avec l'élément à la position actuelle.
     3. Retourner la liste triée.
     """
-    raise NotImplementedError
 
 
 def tri_shell(lst: list[int]) -> list[int]:
