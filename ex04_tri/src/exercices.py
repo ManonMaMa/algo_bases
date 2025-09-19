@@ -25,6 +25,16 @@ def tri_bulle(lst: list[int]) -> list[int]:
 
 
 def tri_insertion(lst: list[int]) -> list[int]:
+    liste = lst
+    N = len(liste)
+    for n in range(1,N):
+        cle = liste[n]
+        j = n-1
+        while j>=0 and liste[j] > cle:
+            liste[j+1] = liste[j] # decalage
+            j = j-1
+        liste[j+1] = cle
+    return liste
     """Tri par insertion (ne pas modifier `lst`).
     Pseudocode:
     1. Créer une copie de `lst` pour éviter la mutation.
@@ -34,7 +44,6 @@ def tri_insertion(lst: list[int]) -> list[int]:
         - Insérer l'élément à la position correcte.
     3. Retourner la liste triée.
     """
-    raise NotImplementedError
 
 
 def tri_selection(lst: list[int]) -> list[int]:
